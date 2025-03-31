@@ -3,123 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaBanlieu - PvP Faction</title>
+    <title>LaBanlieue - PvP Faction</title>
     <style>
-        /* Style global */
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #121212;
+        /* Reset de base */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
+            line-height: 1.6;
         }
 
-        /* Header */
+        /* Background de la page avec image de fond inspirée du Japon la nuit */
         header {
-            background-color: #1a1a1a;
-            color: #ffcc00;
-            padding: 20px 0;
+            background-image: url('https://via.placeholder.com/1500x800/121212/ffcc00?text=Japon+Nuit'); /* Remplace par une image du Japon la nuit */
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
             text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
         }
 
-        /* Menu de navigation */
+        header h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 22px;
+            font-weight: lighter;
+        }
+
+        /* Navigation */
         nav {
-            background-color: #333;
-            padding: 10px 0;
+            background-color: #222;
             text-align: center;
-            font-size: 18px;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
             color: #ffcc00;
-            padding: 10px 20px;
             text-decoration: none;
-            margin: 0 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            margin: 0 20px;
+            font-size: 18px;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #444;
+            background-color: #ffcc00;
+            color: #121212;
+            border-radius: 5px;
         }
 
         /* Conteneur principal */
         .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px;
+            padding: 50px 10%;
         }
 
-        /* Section générale */
+        /* Sections */
         .section {
-            background-color: #1e1e1e;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
 
-        /* Titre de chaque section */
-        h1, h2 {
+        .section h2 {
             color: #ffcc00;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
-        /* Liste des membres */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            font-size: 18px;
-            padding: 8px 0;
-            border-bottom: 1px solid #444;
-        }
-
-        li:last-child {
-            border-bottom: none;
-        }
-
-        /* Lien Discord */
-        .discord-link {
-            color: #ffcc00;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 2px solid #ffcc00;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .discord-link:hover {
+        /* Button Discord */
+        .discord-btn {
+            display: inline-block;
+            padding: 15px 30px;
             background-color: #ffcc00;
             color: #121212;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .discord-btn:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
         }
 
         /* Footer */
         footer {
-            background-color: #1a1a1a;
-            color: #aaa;
+            background-color: #222;
             text-align: center;
             padding: 20px;
+            color: #aaa;
+            font-size: 14px;
             position: relative;
             bottom: 0;
             width: 100%;
-            font-size: 14px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 35px;
+            }
+
+            .container {
+                padding: 30px 5%;
+            }
+
+            nav a {
+                font-size: 16px;
+                margin: 0 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header avec une image de fond inspirée du Japon la nuit -->
     <header>
-        LaBanlieue - PvP Faction
+        <h1>LaBanlieue</h1>
+        <p>Faction PvP - Rejoignez-nous et conquérons le serveur ensemble !</p>
     </header>
 
-    <!-- Menu de navigation -->
+    <!-- Navigation -->
     <nav>
         <a href="#roster">Roster</a>
         <a href="#discord">Discord</a>
@@ -128,10 +148,13 @@
 
     <!-- Contenu principal -->
     <div class="container">
-        <h1>Bienvenue chez LaBanlieue</h1>
-        <p>Faction PvP - Rejoignez-nous et dominez le serveur !</p>
+        <!-- Section Discord simplifiée -->
+        <div id="discord" class="section">
+            <h2>Rejoignez notre Discord</h2>
+            <a href="https://discord.gg/tonlien" target="_blank" class="discord-btn">Cliquez ici pour rejoindre notre Discord</a>
+        </div>
 
-        <!-- Section Roster -->
+        <!-- Section Roster simplifiée -->
         <div id="roster" class="section">
             <h2>Roster</h2>
             <ul>
@@ -153,24 +176,18 @@
             </ul>
         </div>
 
-        <!-- Section Discord -->
-        <div id="discord" class="section">
-            <h2>Rejoignez notre Discord</h2>
-            <p><a href="https://discord.gg/labanlieu" target="_blank" class="discord-link">Cliquez ici pour rejoindre notre Discord</a></p>
-        </div>
-
-        <!-- Section Serveur -->
+        <!-- Section Serveur simplifiée -->
         <div id="serveur" class="section">
             <h2>Où nous jouons</h2>
             <p>Nous jouons sur le serveur **[Nom du serveur]**.</p>
             <p>Adresse IP du serveur : **[Adresse du serveur]**</p>
-            <p>Rejoignez-nous pour participer aux batailles PvP avec notre faction !</p>
+            <p>Rejoignez-nous pour des batailles PvP épiques avec notre faction !</p>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        © 2025 LaBanlieue - PvP Faction. Tous droits réservés.
+        © 2025 LaBanlieu - PvP Faction. Tous droits réservés.
     </footer>
 
 </body>
