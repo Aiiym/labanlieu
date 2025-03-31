@@ -4,200 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaBanlieue - PvP Faction</title>
-    <style>
-        /* Reset de base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        /* Background de la page avec image de fond inspirée du Japon la nuit */
-        header {
-            background-image: url('https://github.com/aiiym/labanlieu/raw/main/A_website_homepage_for_LaBanlieue,_a_PvP_Faction_g.png'); /* Image de fond générée */
-            background-size: cover;
-            background-position: center;
-            padding: 120px 0;
-            text-align: center;
-            color: white;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-        }
-
-        header h1 {
-            font-size: 50px;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        }
-
-        header p {
-            font-size: 22px;
-            font-weight: lighter;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #222;
-            text-align: center;
-            padding: 10px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        nav a {
-            color: #ffcc00;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            padding: 10px 20px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #ffcc00;
-            color: #121212;
-            border-radius: 5px;
-        }
-
-        /* Conteneur principal */
-        .container {
-            padding: 50px 10%;
-        }
-
-        /* Sections */
-        .section {
-            margin: 40px 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .section h2 {
-            color: #ffcc00;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        /* Button Discord */
-        .discord-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #ffcc00;
-            color: #121212;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .discord-btn:hover {
-            background-color: #e6b800;
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #222;
-            text-align: center;
-            padding: 20px;
-            color: #aaa;
-            font-size: 14px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Logo de LaBanlieue */
-        .logo {
-            max-width: 200px;
-            margin: 20px auto;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 35px;
-            }
-
-            .container {
-                padding: 30px 5%;
-            }
-
-            nav a {
-                font-size: 16px;
-                margin: 0 15px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header avec une image de fond inspirée du Japon la nuit -->
+    <!-- Header -->
     <header>
-        <img src="https://github.com/aiiym/labanlieu/raw/main/A_website_homepage_for_LaBanlieue,_a_PvP_Faction_g.png" alt="Logo LaBanlieue" class="logo">
-        <h1>LaBanlieue</h1>
-        <p>Faction PvP - Rejoignez-nous et conquérons le serveur ensemble !</p>
+        <div class="header-content">
+            <img src="images/logo.png" alt="Logo LaBanlieue" class="logo">
+            <h1>LaBanlieue - Faction PvP</h1>
+            <p>Rejoignez la bataille et devenez une légende !</p>
+        </div>
     </header>
 
     <!-- Navigation -->
     <nav>
-        <a href="#roster">Roster</a>
-        <a href="#discord">Discord</a>
-        <a href="#serveur">Serveur</a>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#roster">Roster</a></li>
+            <li><a href="#discord">Discord</a></li>
+            <li><a href="#server">Serveur</a></li>
+        </ul>
     </nav>
 
-    <!-- Contenu principal -->
-    <div class="container">
-        <!-- Section Discord simplifiée -->
-        <div id="discord" class="section">
-            <h2>Rejoignez notre Discord</h2>
-            <a href="https://discord.gg/tonlien" target="_blank" class="discord-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Discord_logo.svg" alt="Discord Logo" style="width: 25px; vertical-align: middle; margin-right: 10px;">Cliquez ici pour rejoindre notre Discord
-            </a>
-        </div>
+    <!-- Section À propos -->
+    <section id="about">
+        <h2>À propos de LaBanlieue</h2>
+        <p>LaBanlieue est une faction PvP où les meilleurs s'affrontent. Unissez-vous pour conquérir le serveur !</p>
+    </section>
 
-        <!-- Section Roster simplifiée -->
-        <div id="roster" class="section">
-            <h2>Roster</h2>
-            <ul>
-                <li>Joueur 1</li>
-                <li>Joueur 2</li>
-                <li>Joueur 3</li>
-                <li>Joueur 4</li>
-                <li>Joueur 5</li>
-                <li>Joueur 6</li>
-                <li>Joueur 7</li>
-                <li>Joueur 8</li>
-                <li>Joueur 9</li>
-                <li>Joueur 10</li>
-                <li>Joueur 11</li>
-                <li>Joueur 12</li>
-                <li>Joueur 13</li>
-                <li>Joueur 14</li>
-                <li>Joueur 15</li>
-            </ul>
-        </div>
+    <!-- Section Roster -->
+    <section id="roster">
+        <h2>Notre Roster</h2>
+        <ul>
+            <li>Joueur 1</li>
+            <li>Joueur 2</li>
+            <li>Joueur 3</li>
+            <li>Joueur 4</li>
+        </ul>
+    </section>
 
-        <!-- Section Serveur simplifiée -->
-        <div id="serveur" class="section">
-            <h2>Où nous jouons</h2>
-            <p>Nous jouons sur le serveur **[Nom du serveur]**.</p>
-            <p>Adresse IP du serveur : **[Adresse du serveur]**</p>
-            <p>Rejoignez-nous pour des batailles PvP épiques avec notre faction !</p>
-        </div>
-    </div>
+    <!-- Section Discord -->
+    <section id="discord">
+        <h2>Rejoignez notre Discord</h2>
+        <a href="https://discord.gg/tonlien" class="discord-btn">Rejoindre le Discord</a>
+    </section>
+
+    <!-- Section Serveur -->
+    <section id="server">
+        <h2>Notre Serveur</h2>
+        <p>Nous jouons sur le serveur **[Nom du serveur]**</p>
+        <p>IP du serveur : **[Adresse du serveur]**</p>
+    </section>
 
     <!-- Footer -->
     <footer>
-        © 2025 LaBanlieue - PvP Faction. Tous droits réservés.
+        <p>&copy; 2025 LaBanlieue - PvP Faction. Tous droits réservés.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
